@@ -5,7 +5,9 @@ import SearchBar from './SeachBar';
 const Header = () => {
     return (
       <div className={classes.header}>
-        <SearchBar />
+        <div>
+            <SearchBar />   
+        </div>
         <img src={zevilogo} alt="zevi log" className={classes.logo}/>
       </div>
     );

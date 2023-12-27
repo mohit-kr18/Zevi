@@ -1,12 +1,18 @@
-
+.header{
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem;
+    align-items: center;
+    gap: 26rem;
+}
 
 .header img{
     height: 2.5rem;
 }
 
-.logo{
-    position:absolute;
-    top: 1rem;
-    right: 1rem;
-   
+
+@media (max-width: 1286px){
+    .header{
+        gap: 10rem;
+    }
 }

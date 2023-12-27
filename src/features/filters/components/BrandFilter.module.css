@@ -1,0 +1,22 @@
+
+
+.brand{
+    display: flex;
+    flex-direction: column;
+}
+
+.brand_item{
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    height: 1.6rem;
+}
+
+.brand_item label{
+      font-size: 0.8rem;
+}
+
+.brand_item input{
+    height: 1rem;
+    width: 1rem;
+}

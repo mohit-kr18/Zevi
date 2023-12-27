@@ -1,0 +1,55 @@
+.card_wrapper{
+    position: relative;
+}
+
+.product_card{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    /* padding: 1rem; */
+    
+}
+
+.product_img{
+    height: 15rem;
+    width: 10rem;
+    object-fit: cover;
+
+}
+
+.price{
+    display: flex;
+    gap: 0.2rem;
+    align-items: center;
+}
+
+.price1{
+    text-decoration: line-through;
+    color: #999999;
+}
+
+.price2{
+    color: #6d84ff;
+    font-weight: 600;
+}
+
+.star{
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.star img{
+    width: 5rem;
+}
+
+.heart img{
+    height: 2rem;
+    width: 2rem;
+}
+
+.heart{
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+}

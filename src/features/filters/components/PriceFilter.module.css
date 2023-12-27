@@ -1,0 +1,22 @@
+
+
+.price{
+    display: flex;
+    flex-direction: column;
+}
+
+.price_range{
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    height: 1.6rem;
+}
+
+.price_range label{
+      font-size: 0.8rem;
+}
+
+.price_range input{
+    height: 1rem;
+    width: 1rem;
+}

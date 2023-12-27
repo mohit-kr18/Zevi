@@ -1,0 +1,27 @@
+.filters{
+    font-family: Inter;
+    width: 30%;
+    /* padding: 1rem; */
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+.brand_section,
+.price_section,
+.rating_section{
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+.brand_heading,
+.price_heading,
+.rating_heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+

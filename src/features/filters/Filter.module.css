@@ -1,28 +1,46 @@
-.filters{
-    font-family: Inter;
-    width: 30%;
-    padding:0 1rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.7rem;
+.filters {
+  font-family: Inter;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  width: 300px;
+  padding: 1rem;
+  /* position: fixed */
 }
 
 .brand_section,
 .price_section,
-.rating_section{
-    display: flex;
-    flex-direction: column;
-    gap: 0.7rem;
+.rating_section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
 }
 
 .brand_heading,
 .price_heading,
-.rating_heading{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-weight: 500;
+.rating_heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
 }
 
+@media (max-width: 1205px) {
+  .brand_heading h4,
+  .price_heading h4,
+  .rating_heading h4{
+    font-size: 0.7rem;
+  }
+}
 
+@media (max-width:600px){
+    .filters{
+        width: 200px;
+    }
+}
 
+@media (max-width:460px){
+    .filters{
+        width: 150px;
+    }
+}

@@ -6,14 +6,38 @@
   gap: 1rem;
 }
 
+.search_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    /* background-color: red; */
+    position: sticky;
+}
 
-
-.filter_products {
-  display: flex;
-  gap: 1rem;
+.search{
+    display: flex;
+    justify-content: center;
+    /* background-color: green; */
+    width: 100%;
+   
+    align-items: center;
 }
 
 .heading {
   font-weight: 400;
   padding-left: 1rem;
 }
+
+.filter_products {
+  display: flex;
+  gap: 1rem;
+}
+
+
+
+.product{
+    display: flex;
+    flex-wrap: wrap;
+}
+

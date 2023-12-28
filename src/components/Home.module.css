@@ -3,5 +3,39 @@
     background-image: url('../assets/backgroundImg.webp');
     background-repeat: no-repeat;
     background-size:cover;
-    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.search_wrapper{
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* .search{
+    width: 50%; 
+} */
+
+.logo{
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem;
+}
+
+
+@media (max-width:1000px){
+    .search{
+        width: 70%;
+    }
+}
+
+@media (max-width:700px){
+    .logo img{
+        height: 2.5rem;
+        width: 2.5rem;
+    }
 }

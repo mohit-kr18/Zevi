@@ -10,8 +10,11 @@ const likedItemSlice = createSlice({
     initialState,
     reducers: {
         toggleLike(state, action) {
+            // console.log(action.payload)
             const isLiked = state.likedItems.find((index) => index === action.payload);
-            if (isLiked) {
+            // console.log(isLiked)
+           
+            if (isLiked!==undefined) {
                 state.likedItems = state.likedItems.filter((index) => index !== action.payload);
             } else {
                 state.likedItems.push(action.payload);

@@ -1,12 +1,4 @@
-.SearchBar{
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    position: absolute;
-    top: 8rem;
-    left: 30%;
-    right: 30%;
-}
+
 
 .SearchBar_wrapper{
     background-color: white;
@@ -15,14 +7,17 @@
     border-radius: 0.7rem;
     padding: 0 1rem;
     border: 1px solid #7f7f7f;
-    max-width: 600px;
+    justify-content: center;
+    width: 500px;
+    /* background-color: blue; */
 }
 
-input{
+.SearchBar_wrapper input{
     height: 2.8rem;
     border-radius: 0.7rem;
     border: none;
     text-decoration: none;
+    margin: auto;
     width: 100%;
 }
 
@@ -38,4 +33,17 @@ textarea:focus, input:focus{
     height: 1.5rem;
     width: 1.5rem;
     cursor: pointer;
+}
+
+
+@media (max-width: 768px){
+    .SearchBar_wrapper{
+        width: 350px;
+    }
+}
+
+@media (max-width: 500px){
+    .SearchBar_wrapper{
+        width: 280px;
+    }
 }

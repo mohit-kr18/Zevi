@@ -4,12 +4,13 @@ import { useDispatch, useSelector } from 'react-redux';
 import { toggleLike } from '../../app/Slices/likedItemSlice';
 import { IoMdHeart, IoMdHeartEmpty } from "react-icons/io";
 
-const ProductCard = ({index,name,img,price1,price2,star,handleMouseEnter,flag}) =>{
+const ProductCard = ({index,name,img,price1,price2,star,handleMouseEnter,handleMouseLeave,flag}) =>{
 
     const dispatch = useDispatch()
 
     const handleLike = (index) =>{
         dispatch(toggleLike(index));
+        console.log(index)
     }
 
     
@@ -20,7 +21,8 @@ const ProductCard = ({index,name,img,price1,price2,star,handleMouseEnter,flag}) 
     return (
       <div
         className={classes.card_wrapper}
-        onMouseEnter={() => handleMouseEnter(index)}
+        onMouseOver={() => handleMouseEnter(index)}
+        onMouseOut={()=>handleMouseLeave()}
       >
         <div className={classes.product_card}>
           <img src={img} alt="product" className={classes.product_img} />

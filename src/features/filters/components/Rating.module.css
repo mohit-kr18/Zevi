@@ -11,8 +11,7 @@
 }
 
 .star img{
-    height: 5rem;
-    width: 5rem;
+    height: 1rem;
 }
 
 .star label{
@@ -22,4 +21,18 @@
 .star input{
     height: 1rem;
     width: 1rem;
+}
+
+@media (max-width: 1205px) {
+  .star label{
+    font-size: 0.7rem;
+  }
+  .rating img{
+    height: 0.7rem;
+ 
+  }
+  .star input{
+    height: 0.8rem;
+    width: 0.8rem;
+}
 }

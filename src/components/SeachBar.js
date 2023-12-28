@@ -1,25 +1,22 @@
 import classes from './SearchBar.module.css'
 import search from '../assets/search.svg'
-import TrendingModal from '../trending/TrendingModal';
-import { useRef, useState } from 'react';
+// import TrendingModal from '../trending/TrendingModal';
+import {  useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 
-const SearchBar = () => {
+const SearchBar = ({openModal}) => {
     
-    const [showModal, setShowModal] = useState(false);
+    
     const [searchTerm, setSearchTerm] = useState('');
 
-    const openModal = () => {
-        setShowModal(prev => !prev);
-    }
-
+   
     const handleChange = (e) => {
         setSearchTerm(e.target.value);
     }
     
     const navigate = useNavigate();
-    
+   
 
     const handleSearch = () =>{
         if(searchTerm){
@@ -47,7 +44,7 @@ const SearchBar = () => {
             onClick={handleSearch}
           />
         </div>
-        {showModal && <TrendingModal />}
+       
       </div>
     );
 }

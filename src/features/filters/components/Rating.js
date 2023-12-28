@@ -1,8 +1,8 @@
 import classes from './Rating.module.css'
-// import onestar from '../../../assets/onestar.jpg'
-// import twostar from '../../../assets/twostar.jpg'
-// import threestar from '../../../assets/threestar.jpg'
-// import fourstar from '../../../assets/fourstar.jpg'
+import onestar from '../../../assets/onestar.jpg'
+import twostar from '../../../assets/twostar.jpg'
+import threestar from '../../../assets/threestar.jpg'
+import fourstar from '../../../assets/fourstar.jpg'
 import fivestar from '../../../assets/fivestar.svg'
 
 
@@ -18,25 +18,25 @@ const Rating = () => {
         <div className={classes.star}>
           <input type="checkbox" />
           <label>
-            <img src={fivestar} alt="four star" />
+            <img src={onestar} alt="four star" />
           </label>
         </div>
         <div className={classes.star}>
           <input type="checkbox" />
           <label>
-            <img src={fivestar} alt="three star" />
+            <img src={threestar} alt="three star" />
           </label>
         </div>
         <div className={classes.star}>
           <input type="checkbox" />
           <label>
-            <img src={fivestar} alt="two star" />
+            <img src={twostar} alt="two star" />
           </label>
         </div>
         <div className={classes.star}>
           <input type="checkbox" />
           <label>
-            <img src={fivestar} alt="one star" />
+            <img src={fourstar} alt="one star" />
           </label>
         </div>
       </div>

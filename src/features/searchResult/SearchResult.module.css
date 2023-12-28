@@ -24,6 +24,10 @@
     align-items: center;
 }
 
+.logo{
+  cursor: pointer;
+}
+
 .heading {
   font-weight: 400;
   padding-left: 1rem;

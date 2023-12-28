@@ -19,7 +19,7 @@ const filterItemSlice = createSlice({
         state.brands = state.brands.filter((brand) => brand !== action.payload);
       } else {
         // state.brands.push(action.payload);
-         state.brands = [...state.brands, action.payload];
+        state.brands = [...state.brands, action.payload];
       }
 
       // Apply filters to products based on selected brands
@@ -66,8 +66,35 @@ const filterItemSlice = createSlice({
         });
       }
     },
+    toggleRating(state, action) {
+      const isFiltered = state.rating.includes(action.payload);
+
+      if (isFiltered) {
+        state.rating = state.rating.filter(
+          (rating) => rating !== action.payload
+        );
+      } else {
+        state.rating.push(action.payload);
+      }
+
+      // Apply filters to products based on selected ratings
+      if (state.rating.length === 0) {
+        // If no ratings selected, reset products to the original list
+        state.products = products;
+      } else {
+        // Apply filters based on selected ratings
+        state.products = products.filter((product) => {
+          const productRating = product.starCount;
+
+          // Check if productRating matches any selected rating
+          return state.rating.some(
+            (selectedRating) => productRating == parseInt(selectedRating, 10)
+          );
+        });
+      }
+    },
   },
 });
 
 export default filterItemSlice.reducer;
-export const { toggleBrand,togglePrice} = filterItemSlice.actions;
+export const { toggleBrand,togglePrice,toggleRating} = filterItemSlice.actions;

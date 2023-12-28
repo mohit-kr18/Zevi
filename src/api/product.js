@@ -9,6 +9,10 @@ import prod12 from "../assets/prod12.png";
 import fivestar from "../assets/fivestar.svg";
 import prod3 from "../assets/prod3.png";
 import prod4 from "../assets/prod4.png";
+import onestar from "../assets/onestar.jpg";
+import threestar from "../assets/threestar.jpg";
+import twostar from "../assets/twostar.jpg";
+import fourstar from "../assets/fourstar.jpg";
 
 export const products = [
   {
@@ -19,6 +23,7 @@ export const products = [
     price2: 1549,
     star: fivestar,
     brand: "Mango",
+    starCount: '5',
   },
   {
     id: 2,
@@ -26,8 +31,9 @@ export const products = [
     img: prod7,
     price1: 999,
     price2: 1749,
-    star: fivestar,
+    star: fourstar,
     brand: "H and M",
+    starCount: '1',
   },
   {
     id: 3,
@@ -37,6 +43,7 @@ export const products = [
     price2: 849,
     star: fivestar,
     brand: "H and M",
+    starCount: '5',
   },
   {
     id: 4,
@@ -44,8 +51,9 @@ export const products = [
     img: prod9,
     price1: 650,
     price2: 449,
-    star: fivestar,
+    star: threestar,
     brand: "Mango",
+    starCount: '3',
   },
   {
     id: 5,
@@ -55,6 +63,7 @@ export const products = [
     price2: 549,
     star: fivestar,
     brand: "H and M",
+    starCount: '5',
   },
   {
     id: 6,
@@ -62,8 +71,9 @@ export const products = [
     img: prod11,
     price1: 599,
     price2: 449,
-    star: fivestar,
+    star: onestar,
     brand: "Mango",
+    starCount: '4',
   },
   {
     id: 7,
@@ -73,6 +83,7 @@ export const products = [
     price2: 1549,
     star: fivestar,
     brand: "H and M",
+    starCount: '5',
   },
   {
     id: 8,
@@ -80,8 +91,9 @@ export const products = [
     img: prod12,
     price1: 599,
     price2: 2549,
-    star: fivestar,
+    star: onestar,
     brand: "Mango",
+    starCount: '4',
   },
   {
     id: 9,
@@ -89,8 +101,9 @@ export const products = [
     img: prod3,
     price1: 999,
     price2: 2649,
-    star: fivestar,
+    star: twostar,
     brand: "H and M",
+    starCount: '2',
   },
   {
     id: 10,
@@ -98,8 +111,9 @@ export const products = [
     img: prod4,
     price1: 559,
     price2: 399,
-    star: fivestar,
+    star: threestar,
     brand: "Mango",
+    starCount: '3',
   },
 ];
 

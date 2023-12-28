@@ -29,7 +29,7 @@
 .card_item{
     display: flex;
     gap: 1rem;
-    
+    flex-wrap: wrap;
 }
 
 .suggestion_wrapper{
@@ -48,4 +48,16 @@
 
 .suggestions p {
     cursor: pointer;
+}
+
+@media (max-width: 1050px){
+    .modal_container{
+        width: 400px;
+    }
+}
+
+@media (max-width: 700px){
+    .modal_container{
+        min-width: 250px;
+    }
 }

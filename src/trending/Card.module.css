@@ -2,3 +2,13 @@
    font-size: 0.8rem;
    cursor: pointer;
 }
+
+@media (max-width: 700px){
+    .card_wrapper img {
+      width: 130px;
+      height: 150px;
+    }
+   .card_wrapper{
+      font-size: 0.7rem;
+   }
+}

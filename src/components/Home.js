@@ -5,6 +5,7 @@ import zevilogo from "../assets/zevilogo.png";
 import { useState } from 'react';
 import TrendingModal from '../trending/TrendingModal';
 
+
 const Home = () => {
 
     const [showModal, setShowModal] = useState(false);
@@ -14,11 +15,12 @@ const Home = () => {
     setShowModal((prev) => !prev);
     };
 
+    
 
     return (
       <>
         <div className={classes.home}>
-          <div className={classes.logo}>
+          <div className={classes.logo} >
             <img src={zevilogo} alt="zevi log" className={classes.logo} />
           </div>
           <div className={classes.search_wrapper}>

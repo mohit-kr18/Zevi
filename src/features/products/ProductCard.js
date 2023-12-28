@@ -1,9 +1,27 @@
 import classes from './ProductCard.module.css'
-import Heart from '../../assets/Heart.svg'
+// import Heart from '../../assets/Heart.svg'
+import { useDispatch, useSelector } from 'react-redux';
+import { toggleLike } from '../../app/Slices/likedItemSlice';
+import { IoMdHeart, IoMdHeartEmpty } from "react-icons/io";
 
-const ProductCard = ({name,img,price1,price2,star}) =>{
+const ProductCard = ({index,name,img,price1,price2,star,handleMouseEnter,flag}) =>{
+
+    const dispatch = useDispatch()
+
+    const handleLike = (index) =>{
+        dispatch(toggleLike(index));
+    }
+
+    
+    const likedItems = useSelector((state) => state.likedItem.likedItems);
+
+    const isLiked = likedItems.find((likedId) => likedId === index) !== undefined;
+
     return (
-      <div className={classes.card_wrapper}>
+      <div
+        className={classes.card_wrapper}
+        onMouseEnter={() => handleMouseEnter(index)}
+      >
         <div className={classes.product_card}>
           <img src={img} alt="product" className={classes.product_img} />
           <p>{name}</p>
@@ -17,8 +35,13 @@ const ProductCard = ({name,img,price1,price2,star}) =>{
           </div>
         </div>
         <div className={classes.heart}>
-          <img src={Heart} alt="heart" />
+          {isLiked ? (
+            <IoMdHeart onClick={() => handleLike(index)} size={20} color="red" />
+          ) : (
+            <IoMdHeartEmpty onClick={() => handleLike(index)} size={20} style={{color:'white'}} />
+          )}
         </div>
+        {flag ? <button className={classes.btn}>View Product</button> : null}
       </div>
     );
 }

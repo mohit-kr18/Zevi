@@ -2,7 +2,7 @@
 
 .product_container{
     display: flex;
-    gap: 1rem;
+    gap: 2rem;
     flex-wrap: wrap;
-    
+    padding: 0 1rem;
 }

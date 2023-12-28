@@ -7,14 +7,13 @@
     flex-direction: column;
     gap: 0.5rem;
     /* padding: 1rem; */
-    
 }
 
 .product_img{
-    height: 15rem;
-    width: 10rem;
+    height: 16rem;
+    width: 12rem;
     object-fit: cover;
-
+    /* opacity: 0.8; */
 }
 
 .price{
@@ -52,4 +51,17 @@
     position: absolute;
     top: 0.5rem;
     right: 0.5rem;
+}
+
+.btn{
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 500;
+    color: white;
+    background-color: #899bf3;
+    border: none;
+    padding: 0.6rem;
+    position: absolute;
+    bottom: 4.9rem;
+    opacity: 0.8;
 }

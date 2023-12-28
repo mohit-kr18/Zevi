@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import classes from './TrendingModal.module.css'
 import { getTrendingProducts } from '../api/trendingProduct'
 import Card from './Card'
+import { useNavigate } from 'react-router-dom'
 
 const TrendingModal = () => {
 
@@ -16,6 +17,13 @@ const TrendingModal = () => {
 
     }, [])
 
+    const navigate =  useNavigate()
+
+    const handleCardClick = () => {
+        navigate('/search')
+    }
+
+
     return (
         <div className={classes.modal_wrapper}>
             <div className={classes.modal_container}>
@@ -23,7 +31,7 @@ const TrendingModal = () => {
                     <h3>Latest Trends</h3>
                     <div className={classes.card_item}>
                         {trendingProducts.map((product) => (
-                            <Card key={product.id} icon={product.img} name={product.name} />
+                            <Card key={product.id} icon={product.img} name={product.name} handleCardClick={handleCardClick} />
                         ))
                         }
                     </div>
@@ -31,11 +39,11 @@ const TrendingModal = () => {
                 <div className={classes.suggestion_wrapper}>
                     <h3>Popular suggestions</h3>
                      <div className={classes.suggestions}>
-                        <p>Stripped shirt dress</p>
-                        <p>Satin shirts</p>
-                        <p>Denim jumpsuit</p>
-                        <p>Leather dresses</p>
-                        <p>Solid tshirts</p>
+                        <p onClick={handleCardClick}>Stripped shirt dress</p>
+                        <p onClick={handleCardClick}>Satin shirts</p>
+                        <p onClick={handleCardClick}>Denim jumpsuit</p>
+                        <p onClick={handleCardClick}>Leather dresses</p>
+                        <p onClick={handleCardClick}>Solid tshirts</p>
                      </div>   
                 </div>
             </div>

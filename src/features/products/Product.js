@@ -15,18 +15,29 @@ const Product = () => {
         }
         fetchProducts()
     }, [])    
+
+    const [hoveredItem, setHoveredItem] = useState(null)
+
+    const handleMouseEnter = (id) => {
+        setHoveredItem(id)
+    }
+
         
     return (
         <div className={classes.product_wrapper}>
             <div className={classes.product_container}>
                 {
-                    products.map((product)=>
-                    <ProductCard key={product.id} 
+                    products.map((product,index)=>
+                    <ProductCard key={product.id}
+                                index={index} 
                                 name={product.name} 
                                 img={product.img}
                                 price1={product.price1}
                                 price2={product.price2}
-                                star={product.star}/>
+                                star={product.star}
+                                handleMouseEnter={handleMouseEnter}
+                                flag={hoveredItem === index}
+                                />
                     )
                 }
             </div>

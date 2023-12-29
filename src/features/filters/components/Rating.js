@@ -11,8 +11,7 @@ import { toggleRating } from '../../../app/Slices/filterItemSlice'
 const Rating = () => {
 
     const dispatch = useDispatch();
-    const rating = useSelector((state) => state.filterItem.rating);
-    // console.log(rating)
+    
 
     const handleRating = (e) => {
         // dispatch(toggleRating(e.target.nextSibling.innerHTML));

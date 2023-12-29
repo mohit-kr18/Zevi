@@ -1,4 +1,4 @@
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch,  } from 'react-redux';
 import { togglePrice } from '../../../app/Slices/filterItemSlice';
 import classes from './PriceFilter.module.css'
 
@@ -6,8 +6,7 @@ const PriceFilter = () => {
 
     const dispatch = useDispatch();
 
-    const price = useSelector((state) => state.filterItem.price);
-    // console.log(price)
+   
 
     const handlePrice = (e) => {
         dispatch(togglePrice(e.target.nextSibling.innerHTML));

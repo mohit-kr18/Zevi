@@ -93,8 +93,52 @@ const filterItemSlice = createSlice({
         });
       }
     },
-  },
+    toggleFilters(state, action) {
+        const { brands, price, rating } = action.payload;
+
+        // Apply filters based on selected brands
+        let filteredProducts = products;
+        if (brands) {
+            filteredProducts = filteredProducts.filter((product) =>
+                brands.includes(product.brand)
+            );
+        }
+
+        // Apply filters based on selected prices
+        if (price.length > 0) {
+            filteredProducts = filteredProducts.filter((product) => {
+                const productPrice = product.price2;
+
+                return price.some((selectedPrice) => {
+                    if (selectedPrice === "Under 500") {
+                        return productPrice <= 500;
+                    } else if (selectedPrice === "1000 to 3000") {
+                        return productPrice >= 1000 && productPrice <= 3000;
+                    }
+
+                    // Handle other price ranges if needed
+
+                    return false;
+                });
+            });
+        }
+
+        // Apply filters based on selected ratings
+        if (rating.length > 0) {
+            filteredProducts = filteredProducts.filter((product) => {
+                const productRating = product.starCount;
+
+                return rating.some(
+                    (selectedRating) => productRating == parseInt(selectedRating, 10)
+                );
+            });
+        }
+
+        // Update the state with the filtered products
+        state.products = filteredProducts;
+    },
+},
 });
 
 export default filterItemSlice.reducer;
-export const { toggleBrand,togglePrice,toggleRating} = filterItemSlice.actions;
+export const { toggleBrand,togglePrice,toggleRating,toggleFilters} = filterItemSlice.actions;
